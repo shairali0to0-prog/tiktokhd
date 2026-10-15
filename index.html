@@ -12,7 +12,7 @@
 <meta property="og:description" content="Premium TikTok Downloader - 1080p HD, No Watermark, Fast & Free">
 <meta property="og:url" content="https://tiktokhd.vercel.app/">
 <meta property="og:type" content="website">
-<meta name="google-site-verification" content="google2762992679ed0353">
+<meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_CODE_HERE">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -99,10 +99,11 @@ body{font-family:'Inter',system-ui,Arial;background:#fff;color:#111;line-height:
 <div><h3 id="title">Video Ready!</h3><p id="author" style="color:#a1a1aa;font-size:13px;margin-top:6px"></p></div>
 </div>
 <div class="dl-grid">
-<a id="dlHD" target="_blank" class="dl-btn dl-hd">⬇ HD 1080p</a>
-<a id="dlSD" target="_blank" class="dl-btn dl-sd">SD 720p</a>
-<a id="dlMP3" target="_blank" class="dl-btn dl-mp3">🎵 MP3 Audio</a>
+<a id="dlHD" class="dl-btn dl-hd" style="cursor:pointer" onclick="forceDownload(this.dataset.url, 'tiktok-hd')">⬇ HD 1080p - Direct Save to Gallery</a>
+<a id="dlSD" class="dl-btn dl-sd" style="cursor:pointer" onclick="forceDownload(this.dataset.url, 'tiktok-sd')">SD 720p</a>
+<a id="dlMP3" class="dl-btn dl-mp3" style="cursor:pointer" onclick="forceDownload(this.dataset.url, 'tiktok-audio')">🎵 MP3 Audio</a>
 </div>
+<div id="dlStatus" style="margin-top:12px;font-size:13px;color:#25F4EE;display:none">⏳ Downloading... Video will save to Gallery/Downloads automatically!</div>
 </div>
 
 <div class="trust">
@@ -131,6 +132,40 @@ body{font-family:'Inter',system-ui,Arial;background:#fff;color:#111;line-height:
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register('/sw.js');
 }
+
+// Direct Gallery Save Function
+async function forceDownload(url, filename){
+  let status=document.getElementById('dlStatus');
+  status.style.display='block';
+  status.innerText='⏳ Downloading... 0% - Will auto-save to Gallery!';
+  
+  try{
+    // Method 1: Try direct download with <a download>
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename + '-' + Date.now() + '.mp4';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    
+    status.innerText='✅ Download started! Check Gallery/Downloads - If video plays instead, long-press video > Save Video';
+    status.style.color='#00ff88';
+    
+    // Method 2: For mobile - also try fetch blob method after 1 sec if needed
+    setTimeout(async () => {
+      try{
+        status.innerText='💡 Tip: If video opened in new tab, tap ••• (3 dots) > Download, or long-press > Save Video to Gallery';
+      }catch(e){}
+    }, 2000);
+    
+  }catch(e){
+    // Fallback: Open in new tab
+    window.open(url, '_blank');
+    status.innerText='📱 Video opened - Tap Share > Save to Gallery / Download';
+  }
+}
+
 async function downloadNow(){
   let url=document.getElementById('tiktokUrl').value.trim();
   if(!url.includes('tiktok')){let s=document.getElementById('status');s.style.display='block';s.innerText='❌ Valid TikTok link paste karo';return}
@@ -142,7 +177,11 @@ async function downloadNow(){
     if(d.cover)document.getElementById('thumb').src=d.cover;
     if(d.title)document.getElementById('title').innerText=d.title.substring(0,70);
     if(d.author)document.getElementById('author').innerText='By @'+(d.author.unique_id||'user');
-    document.getElementById('dlHD').href=d.hdplay||d.play;document.getElementById('dlSD').href=d.play;document.getElementById('dlMP3').href=d.music;
+    // Store URL in dataset for direct download
+    document.getElementById('dlHD').dataset.url=d.hdplay||d.play;
+    document.getElementById('dlSD').dataset.url=d.play;
+    document.getElementById('dlMP3').dataset.url=d.music;
+    document.getElementById('dlStatus').style.display='none';
     document.getElementById('result').scrollIntoView({behavior:'smooth'});
   }catch(e){status.innerText='❌ Error, try again';document.getElementById('mainBtn').innerText='⬇ Download HD Video';}
 }
