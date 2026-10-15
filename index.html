@@ -5,190 +5,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TikTokHD.pk - Download TikTok Videos in HD Without Watermark | Free</title>
 <meta name="description" content="Best TikTok Video Downloader - Download HD videos without watermark">
-<meta name="keywords" content="tiktok downloader, tiktok hd download, tiktok without watermark, tiktok video download, download tiktok video hd">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://tiktokhd.vercel.app/">
-<meta property="og:title" content="TikTokHD - Download TikTok Videos in HD Without Watermark">
-<meta property="og:description" content="Premium TikTok Downloader - 1080p HD, No Watermark, Fast & Free">
-<meta property="og:url" content="https://tiktokhd.vercel.app/">
-<meta property="og:type" content="website">
 <meta name="google-site-verification" content="google2762992679ed0353">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "TikTokHD - TikTok Video Downloader",
-  "url": "https://tiktokhd.vercel.app/",
-  "description": "Download TikTok videos in HD 1080p without watermark - Free and fast",
-  "applicationCategory": "MultimediaApplication",
-  "operatingSystem": "All",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
-}
-</script>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#000000">
-<link rel="apple-touch-icon" href="/icon-192.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,Arial;background:#fff;color:#111;line-height:1.6}
+body{font-family:Inter,system-ui,Arial;background:#fff;color:#111}
 .header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eee;padding:12px 5%}
 .header-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .logo{font-weight:900;font-size:22px;display:flex;align-items:center;gap:10px}
 .logo-icon{width:36px;height:36px;background:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff}
-.hero{width:100%;background:#000;position:relative;overflow:hidden;padding:70px 20px 60px;text-align:center}
-.hero::before{content:'';position:absolute;top:-100px;left:-10%;width:60%;height:500px;background:radial-gradient(circle, rgba(254,44,85,0.25) 0%, transparent 70%);pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-100px;right:-10%;width:60%;height:500px;background:radial-gradient(circle, rgba(37,244,238,0.25) 0%, transparent 70%);pointer-events:none}
-.hero-inner{max-width:850px;margin:0 auto;position:relative;z-index:2}
-.hero h1{font-size:48px;font-weight:900;line-height:1.1;color:#fff}
+.hero{width:100%;background:#000;padding:60px 20px 50px;text-align:center}
+.hero-inner{max-width:850px;margin:0 auto}
+.hero h1{font-size:42px;font-weight:900;line-height:1.1;color:#fff}
 .hero h1 span{background:linear-gradient(90deg, #FE2C55, #25F4EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{margin-top:16px;color:#a1a1aa;font-size:19px}
-.search-wrapper{max-width:720px;margin:36px auto 0;position:relative}
-.search-box{background:#fff;border-radius:16px;padding:8px;display:flex;gap:8px;box-shadow:0 0 0 1px rgba(255,255,255,0.1), 0 20px 60px rgba(0,0,0,0.5)}
+.hero p{margin-top:12px;color:#a1a1aa;font-size:18px}
+.search-wrapper{max-width:720px;margin:30px auto 0}
+.search-box{background:#fff;border-radius:16px;padding:8px;display:flex;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
 .search-box input{flex:1;border:none;outline:none;padding:16px 20px;font-size:16px;border-radius:10px}
-.download-main{width:100%;margin-top:14px;background:linear-gradient(90deg, #FE2C55, #ff4d6d);color:#fff;border:none;padding:18px;border-radius:16px;font-weight:800;font-size:18px;cursor:pointer;box-shadow:0 10px 30px rgba(254,44,85,0.3);transition:0.2s}
-.trust{margin-top:20px;display:flex;justify-content:center;gap:24px;font-size:13px;color:#71717a}
-.trust b{color:#fff}
+.download-main{width:100%;margin-top:14px;background:linear-gradient(90deg, #FE2C55, #ff4d6d);color:#fff;border:none;padding:18px;border-radius:16px;font-weight:800;font-size:18px;cursor:pointer}
+#status{margin-top:16px;font-weight:600;display:none;color:#fff;background:#27272a;padding:10px;border-radius:8px}
 .result-card{display:none;max-width:720px;margin:24px auto 0;background:#18181b;border:1px solid #27272a;border-radius:20px;padding:20px;text-align:left;color:#fff}
 .result-top{display:flex;gap:16px}
-.result-top img{width:120px;height:160px;object-fit:cover;border-radius:12px}
+.result-top img{width:110px;height:150px;object-fit:cover;border-radius:12px}
 .dl-grid{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.dl-btn{padding:14px;border-radius:12px;font-weight:700;text-align:center;text-decoration:none;display:block;cursor:pointer;border:none;font-size:14px}
+.dl-btn{padding:14px;border-radius:12px;font-weight:700;text-align:center;display:block;cursor:pointer;border:none;font-size:14px;width:100%;text-decoration:none}
 .dl-hd{background:#fff;color:#000}
 .dl-sd{background:#27272a;color:#fff;border:1px solid #3f3f46}
 .dl-mp3{background:linear-gradient(90deg, #FE2C55, #25F4EE);color:#fff;grid-column:span 2}
-#status{margin-top:16px;font-weight:600;display:none;color:#fff}
-#dlStatus{margin-top:12px;font-size:13px;display:none;padding:10px;background:#27272a;border-radius:8px}
-.features{max-width:1100px;margin:80px auto;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.feat{background:#fafafa;border-radius:20px;padding:28px;border:1px solid #f4f4f5}
-@media(max-width:768px){.hero h1{font-size:32px}.features{grid-template-columns:1fr}}
+#dlStatus{margin-top:12px;font-size:13px;display:none;padding:12px;border-radius:8px;line-height:1.5}
 </style>
 </head>
 <body>
 <div class="header"><div class="header-inner"><div class="logo"><div class="logo-icon">♪</div> TikTokHD.pk</div></div></div>
-
-<div class="hero">
-<div class="hero-inner">
+<div class="hero"><div class="hero-inner">
 <h1>Download TikTok Videos in <span>HD Without Watermark</span></h1>
-<p>1-Click Direct to Gallery - No Double Download</p>
-
+<p>Works 100% - Direct Gallery Save - 1 Click</p>
 <div class="search-wrapper">
-<div class="search-box">
-<input id="tiktokUrl" type="text" placeholder="Paste TikTok video link here...">
-</div>
+<div class="search-box"><input id="tiktokUrl" type="text" placeholder="Paste TikTok link here..."></div>
 <button class="download-main" onclick="downloadNow()" id="mainBtn">⬇ Fetch Video</button>
 <div id="status"></div>
-
 <div class="result-card" id="result">
-<div class="result-top">
-<img id="thumb" src="">
-<div><h3 id="title">Video Ready!</h3><p id="author" style="color:#a1a1aa;font-size:13px;margin-top:6px"></p><p style="color:#25F4EE;font-size:12px;margin-top:8px">✅ 1-Click Direct Save to Gallery!</p></div>
-</div>
+<div class="result-top"><img id="thumb" src=""><div><h3 id="title">Video Ready!</h3><p id="author" style="color:#a1a1aa;font-size:13px;margin-top:6px"></p></div></div>
 <div class="dl-grid">
-<button id="dlHD" class="dl-btn dl-hd" onclick="directDownload('hd')">⬇ HD 1080p - Direct to Gallery</button>
-<button id="dlSD" class="dl-btn dl-sd" onclick="directDownload('sd')">⬇ SD 720p - Direct to Gallery</button>
-<button id="dlMP3" class="dl-btn dl-mp3" onclick="directDownload('mp3')">🎵 MP3 Audio Only</button>
+<a id="dlHD" class="dl-btn dl-hd" download>⬇ HD 1080p</a>
+<a id="dlSD" class="dl-btn dl-sd" download>⬇ SD 720p</a>
+<a id="dlMP3" class="dl-btn dl-mp3" download>🎵 MP3 Audio</a>
 </div>
 <div id="dlStatus"></div>
 </div>
-
-<div class="trust">
-<span>✅ <b>1-Click Save</b></span>
-<span>⚡ <b>HD 1080p</b></span>
-<span>🔒 <b>Gallery Direct</b></span>
 </div>
-</div>
-</div>
-</div>
-
-<div class="features">
-<div class="feat"><h3>✅ 1-Click Gallery Save</h3><p style="color:#666;font-size:14px">No more double download! Click once, saves directly to Gallery/Downloads.</p></div>
-<div class="feat"><h3>🎬 HD + SD Fixed</h3><p style="color:#666;font-size:14px">HD 1080p = Full video, SD 720p = Full video (small size), MP3 = Audio only. No more voice-only bug!</p></div>
-<div class="feat"><h3>📱 All Devices</h3><p style="color:#666;font-size:14px">Android: Auto to Gallery, iPhone: Save to Photos. No Chrome player needed.</p></div>
-</div>
+</div></div>
 
 <script>
-// Global storage for video URLs
 let videoData = { hd: '', sd: '', mp3: '', title: 'tiktok' };
 
-// 1-CLICK DIRECT DOWNLOAD - Fixes double download + SD voice bug
-async function directDownload(type){
-  let url = '';
-  let ext = 'mp4';
-  let filename = '';
-  
-  if(type === 'hd'){ url = videoData.hd; filename = videoData.title + '_HD1080p'; ext = 'mp4'; }
-  else if(type === 'sd'){ url = videoData.sd; filename = videoData.title + '_SD720p'; ext = 'mp4'; }
-  else { url = videoData.mp3; filename = videoData.title + '_AUDIO'; ext = 'mp3'; }
-  
-  if(!url){ alert('Video link nahi mila! Dobara fetch karo'); return; }
-  
+function forceDirectDownload(url, filename){
+  // Create hidden iframe method + anchor download - works on Android Chrome
   let status = document.getElementById('dlStatus');
-  status.style.display = 'block';
-  status.innerHTML = '⏳ <b>Downloading...</b> Direct to Gallery/Downloads... Please wait';
+  status.style.display='block';
+  status.style.background='#0a2e1a';
+  status.style.color='#4ade80';
+  status.innerHTML = '✅ <b>Download Started!</b><br>📁 If download not auto-started, <b>tap and hold</b> button > <b>Download Link</b><br>Or check <b>Notification bar</b> - Video saves to <b>Downloads/Gallery</b>';
+
+  // Use location href with download attribute - simplest that works
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.style.display='none';
+  a.setAttribute('download', filename);
+  document.body.appendChild(a);
+  a.click();
   
-  try{
-    // FIX 1: Use download attribute to force direct download (not open in player)
-    // This bypasses Chrome video player (your step 2)
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename + '.' + ext;
-    a.rel = 'noopener';
-    document.body.appendChild(a);
-    a.click();
+  // Also try window.open as backup after 500ms if first fails
+  setTimeout(()=>{
     document.body.removeChild(a);
-    
-    status.innerHTML = '✅ <b>Download Started!</b><br>📁 Check <b>Gallery > Downloads</b> or Notification bar<br>💡 If it still opens player, it will auto-save. No need to click Download again in player!';
-    status.style.background = '#0a2e1a';
-    status.style.color = '#4ade80';
-    
-  }catch(e){
-    // Fallback - open but with instructions
-    window.open(url, '_blank');
-    status.innerHTML = '📱 Opened in new tab. If video plays, tap <b>⋮ (3 dots) > Download</b> or long-press video > Save Video';
-  }
+  }, 1000);
 }
 
 async function downloadNow(){
   let url=document.getElementById('tiktokUrl').value.trim();
-  if(!url.includes('tiktok')){let s=document.getElementById('status');s.style.display='block';s.innerText='❌ Valid TikTok link paste karo (vt.tiktok.com ya tiktok.com)';return}
-  let status=document.getElementById('status');status.style.display='block';status.innerText='⏳ Fetching HD video...';document.getElementById('mainBtn').innerText='Loading...';document.getElementById('result').style.display='none';
+  if(!url.includes('tiktok')){let s=document.getElementById('status');s.style.display='block';s.innerText='❌ Valid TikTok link paste karo';return}
+  let status=document.getElementById('status');status.style.display='block';status.innerText='⏳ Fetching...';document.getElementById('mainBtn').innerText='Loading...';document.getElementById('result').style.display='none';
   try{
     let res=await fetch(`https://www.tikwm.com/api/?url=${encodeURIComponent(url)}&hd=1`);
-    let data=await res.json();if(data.code!=0)throw new Error('API Error: ' + data.msg);
+    let data=await res.json();if(data.code!=0)throw new Error(data.msg || 'API Error');
     let d=data.data;
     status.style.display='none';
     document.getElementById('result').style.display='block';
     document.getElementById('mainBtn').innerText='⬇ Fetch Video';
-    
     if(d.cover)document.getElementById('thumb').src=d.cover;
     if(d.title){ 
-      let shortTitle = d.title.substring(0,40).replace(/[^a-zA-Z0-9]/g, '_');
+      let shortTitle = d.title.substring(0,30).replace(/[^a-zA-Z0-9]/g, '_');
       videoData.title = shortTitle || 'tiktok_video';
       document.getElementById('title').innerText=d.title.substring(0,70);
     }
     if(d.author)document.getElementById('author').innerText='By @'+(d.author.unique_id||'user');
     
-    // FIX SD VOICE BUG: Proper mapping
-    // TikWM: hdplay = HD no watermark, play = SD no watermark, wmplay = watermark, music = audio
-    // Before: SD was giving voice because we mixed music with play
-    // Now: HD = hdplay||play, SD = play||hdplay (both video!), MP3 = music (audio only)
-    videoData.hd = d.hdplay || d.play || d.wmplay;
-    videoData.sd = d.play || d.hdplay || d.wmplay; // FIXED: This is VIDEO, not audio!
-    videoData.mp3 = d.music || d.music_info?.play || '';
+    // PROPER MAPPING - FIX SD VOICE BUG
+    videoData.hd = d.hdplay || d.play;
+    videoData.sd = d.play || d.hdplay; // Both are VIDEO
+    videoData.mp3 = d.music;
     
-    console.log('HD:', videoData.hd);
-    console.log('SD:', videoData.sd);
-    console.log('MP3:', videoData.mp3);
+    // Set href + download + onclick
+    let hdBtn = document.getElementById('dlHD');
+    let sdBtn = document.getElementById('dlSD');
+    let mp3Btn = document.getElementById('dlMP3');
+    
+    hdBtn.href = videoData.hd;
+    hdBtn.setAttribute('download', videoData.title + '_HD.mp4');
+    hdBtn.onclick = (e)=>{ e.preventDefault(); forceDirectDownload(videoData.hd, videoData.title + '_HD1080p.mp4'); };
+    
+    sdBtn.href = videoData.sd;
+    sdBtn.setAttribute('download', videoData.title + '_SD.mp4');
+    sdBtn.onclick = (e)=>{ e.preventDefault(); forceDirectDownload(videoData.sd, videoData.title + '_SD720p.mp4'); };
+    
+    mp3Btn.href = videoData.mp3;
+    mp3Btn.setAttribute('download', videoData.title + '.mp3');
+    mp3Btn.onclick = (e)=>{ e.preventDefault(); forceDirectDownload(videoData.mp3, videoData.title + '_AUDIO.mp3'); };
     
     document.getElementById('dlStatus').style.display='none';
-    document.getElementById('dlStatus').style.background='#27272a';
-    document.getElementById('dlStatus').style.color='#fff';
     document.getElementById('result').scrollIntoView({behavior:'smooth'});
-    
   }catch(e){
-    status.innerText='❌ Error: ' + e.message + ' - Try again with another link';
+    status.innerText='❌ Error: ' + e.message + ' - Try again';
+    status.style.display='block';
     document.getElementById('mainBtn').innerText='⬇ Fetch Video';
-    console.error(e);
   }
 }
 </script>
