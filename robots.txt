@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://tiktokhd.pk/sitemap.xml
+
+Sitemap: https://tiktokhd.vercel.app/sitemap.xml
